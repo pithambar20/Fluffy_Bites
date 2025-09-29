@@ -1,0 +1,326 @@
+/* --- Base Styles & Typography (Dark Theme) --- */
+:root {
+    /* Retain original accents */
+    --primary-color: #a1690e; /* Soft Red/Coral for accents */
+    --secondary-color: #4ecdc4; /* Teal for highlights */
+
+    /* Dark Theme Colors */
+    --text-color: #f4f4f4; /* Light text */
+    --background-dark: #1e1e1e; /* Main dark background */
+    --background-medium: #2a2a2a; /* Slightly lighter dark background for sections/cards */
+    --background-accent: #333333; /* Darker accent/input background */
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-dark); /* Main Dark Background */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: var(--text-color); /* Ensure headings are visible */
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: var(--primary-color); /* Keep primary accent for section headings */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Utility Button --- */
+.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--background-medium); /* Use a darker color for text on the button */
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #ff4757; /* Slightly darker red - NOTE: This should probably use a dynamic dark tone of primary-color */
+}
+
+/* --- Header & Navigation (Dark Theme) --- */
+.main-header {
+    background: var(--background-medium); /* Darker header */
+    color: var(--text-color);
+    padding: 1em 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Stronger shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main-header ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-header ul li a {
+    color: var(--text-color); /* Light link color */
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-header ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: var(--secondary-color); /* Keep the teal accent for the hero */
+    color: var(--background-medium);
+    text-align: center;
+    padding: 4em 0;
+}
+
+.hero-section h2 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    color: var(--background-medium); /* Dark text on the light-accent background */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* --- General Section Styling (Dark Theme) --- */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Alternate sections for visual separation */
+section:nth-child(even) {
+    background: var(--background-medium); /* Medium dark */
+}
+
+section:nth-child(odd) {
+    background: var(--background-dark); /* Main dark */
+}
+
+/* --- Menu Section (Dark Theme) --- */
+.menu-section {
+    background: var(--background-medium); /* Medium dark */
+}
+
+.menu-item {
+    background: var(--background-accent); /* Darker card background */
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+}
+
+.menu-item .price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+    display: block;
+}
+
+/* --- Ratings Section (Dark Theme) --- */
+.ratings-section {
+    background: var(--background-dark);
+}
+
+.rating-display {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--background-medium); /* Medium dark card */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.stars {
+    font-size: 2.5em;
+    color: gold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stars .full, .stars .half {
+    color: #ffc107; /* Standard Gold */
+}
+
+.average-rating {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.average-rating span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+/* --- Feedback Form Section (Dark Theme) --- */
+.feedback-section {
+    background: var(--background-medium);
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--background-accent); /* Darker card for form */
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color); /* Light label text */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555; /* Light grey border */
+    border-radius: 5px;
+    font-size: 1em;
+    background: var(--background-dark); /* Dark input field */
+    color: var(--text-color); /* Light text inside input */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Center the submit button */
+.feedback-form .button {
+    /* Change from inline-block (default) to block */
+    display: block; 
+    /* Set margin to 0 auto to center a block element */
+    margin-left: auto;
+    margin-right: auto;
+    /* Optional: Override margin-top for control */
+    margin-top: 20px; 
+}
+
+/* --- Star Rating Input in Form --- */
+.star-rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.star-rating-input input[type="radio"] {
+    display: none;
+}
+
+.star-rating-input label {
+    font-size: 2em;
+    color: #555; /* Default darker grey color for unrated stars */
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 2px;
+}
+
+/* Hover and Checked states remain Gold for contrast */
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input[type="radio"]:checked ~ label {
+    color: #ffd700; /* Gold */
+}
+
+
+/* --- Footer (Dark Theme) --- */
+footer {
+    background: var(--primary-color); /* Use accent color for a contrasting footer */
+    color: var(--background-medium); /* Dark text on accent background */
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Media Queries for Responsiveness (Maintained) --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header h1 {
+        margin-bottom: 10px;
+    }
+
+    .main-header ul {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .main-header ul li a {
+        padding: 8px 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+}
